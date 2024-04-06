@@ -2,12 +2,11 @@ import Image from "next/image";
 
 export default function RSVP() {
   return (
-    <div className="bg-neutral-200 grid sm:grid-cols-10 grid-cols-4 p-6 max-w-screen-sm mt-6 mx-6 gap-3 text-black">
-      <div className="text-left sm:col-span-9 col-span-3">
+    <div className="bg-neutral-200 grid sm:grid-cols-10 grid-cols-5 p-6 max-w-screen-sm mt-6 mx-6 gap-3 text-black">
+      <div className="text-left sm:col-span-9 col-span-4">
         <h1 className=" font-medium text-5xl mb-3">RSVP</h1>
         <div className="grid grid-cols-2 gap-4">
           <Image
-            // className="sm:block hidden"
             src="https://michigandatascienceteam.github.io/expo/rsvp.jpg"
             alt="RSVP"
             width={1200}

@@ -15,12 +15,12 @@ function NavItem({ title, href }: NavItemProps) {
 
 export default function Navbar() {
   return (
-    <nav className="border-white flex flex-row align-middle justify-between py-3 px-4 border-b-2">
-      <h1 className="font-light text-xl pt-2.5 text-pretty">DSN @ U-M</h1>
+    <nav className="border-white flex flex-row items-center justify-between py-3 px-4 border-b-2">
+      <h1 className="sm:text-xl text-md font-bold text-pretty">DSN @ U-M</h1>
       <ul className="flex flex-row">
         <NavItem title="Home" href="#home" />
-        <NavItem title="About" href="#about" />
-        <NavItem title="Who We Are" href="#team" />
+        <NavItem title="Event" href="#about" />
+        <NavItem title="Clubs" href="#team" />
       </ul>
     </nav>
   );

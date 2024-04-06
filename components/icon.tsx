@@ -15,6 +15,7 @@ import {
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoSlack,
+  IoLogoTwitter,
   IoMail,
 } from "react-icons/io5";
 
@@ -31,6 +32,7 @@ const iconMap: IconMap = {
   instagram: IoLogoInstagram,
   linkedin: IoLogoLinkedin,
   github: IoLogoGithub,
+  twitter: IoLogoTwitter,
   caret_up: IoCaretUp,
   caret_down: IoCaretDown,
   "arrow-left": IoArrowBackCircle,

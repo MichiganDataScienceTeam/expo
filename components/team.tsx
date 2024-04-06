@@ -38,7 +38,7 @@ const teams: Team[] = [
   {
     name: "Statistics in the Community",
     description:
-      "Statistics in the Community of Michigan (STATCOM) is a student organization that provides statistical consulting services to local non-profit organizations.",
+      "Statistics in the Community of Michigan (STATCOM) is a graduate student organization that provides statistical consulting services to local non-profit organizations.",
     logo_path: "/statcom.png",
     icons: [
       {
@@ -48,6 +48,10 @@ const teams: Team[] = [
       {
         href: "https://www.instagram.com/umichstats/?hl=en",
         type: "instagram",
+      },
+      {
+        href: "https://x.com/statcom_um?t=4qxNoVnQqPbRbGZm1XfYhg&s=09",
+        type: "twitter",
       },
     ],
   },
@@ -71,18 +75,20 @@ const teams: Team[] = [
 
 function TeamCard({ team }: { team: Team }) {
   return (
-    <div className="grid sm:grid-cols-3 grid-cols-2 lg:auto-rows-max lg:grid-cols-1 p-5 bg-gray-700 text-center gap-2 mb-28">
-      <Image
-        className="lg:object-contain sm:block hidden"
-        src={`https://michigandatascienceteam.github.io/expo/${team.logo_path}`}
-        alt={team.name}
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: "100%", height: "auto" }}
-      />
+    <div className="grid sm:grid-cols-3 grid-cols-none lg:auto-rows-max lg:grid-cols-1 p-5 border-2 rounded-lg text-center gap-2">
+      <div className="flex justify-center">
+        <Image
+          className="lg:object-contain max-w-xs sm:block hidden"
+          src={`https://michigandatascienceteam.github.io/expo/${team.logo_path}`}
+          alt={team.name}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
       <div className="lg:px-0 pl-3 lg:col-span-1 col-span-2">
-        <h3 className="my-3 font-medium text-2xl">{team.name}</h3>
+        <h3 className="my-4 font-medium text-2xl">{team.name}</h3>
         <div className="flex flex-row justify-center gap-3 mb-3">
           {team.icons.map((icon, index) => (
             <a key={index} href={icon.href}>
@@ -98,9 +104,12 @@ function TeamCard({ team }: { team: Team }) {
 
 export default function TeamPanel() {
   return (
-    <div id="team" className="flex flex-col items-center mt-7 align-middle">
-      <h1 className="font-regular text-5xl">Who We Are</h1>
-      <div className="grid lg:grid-cols-3 lg:grid-rows-1 grid-cols-1 grid-rows-3 gap-5 mt-4 lg:max-w-screen-lg max-w-screen-sm">
+    <div
+      id="team"
+      className="flex flex-col items-center mt-7 align-middle mb-20"
+    >
+      <h1 className="font-regular sm:text-5xl text-3xl">About the Clubs</h1>
+      <div className="grid lg:grid-cols-3 lg:grid-rows-1 grid-cols-1 grid-rows-3 gap-5 mt-10 lg:max-w-screen-lg max-w-screen-sm">
         {teams.map((team, index) => (
           <TeamCard key={index} team={team} />
         ))}
