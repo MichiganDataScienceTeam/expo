@@ -1,6 +1,6 @@
 import RSVP from "./rsvp";
 import Navbar from "./navbar";
-import TeamPanel, { Team } from "./team";
+import TeamPanel from "./team";
 
 export default function Home() {
   return (
