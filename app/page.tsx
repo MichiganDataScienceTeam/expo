@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <p className="text-xl font-bold">
             Join us on April 19th, 2024 at the Central Campus Classroom Building
-            from 4:30 PM to 8:30 PM.
+            from 4:30 PM to 8:15 PM.
           </p>
           <Image
             className="my-10"
