@@ -1,6 +1,6 @@
-import RSVP from "./rsvp";
-import Navbar from "./navbar";
-import TeamPanel from "./team";
+import RSVP from "@/components/rsvp";
+import TeamPanel from "@/components/team";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
