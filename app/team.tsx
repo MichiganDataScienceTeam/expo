@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import Icon from "./icon";
 
-interface Icon {
+interface IconJson {
   href: string;
-  img_path: string;
+  type: string;
 }
 
-export interface Team {
+interface Team {
   name: string;
   description: string;
   logo_path: string;
-  icons: Icon[];
+  icons: IconJson[];
 }
 
 const teams: Team[] = [
@@ -22,15 +23,15 @@ const teams: Team[] = [
     icons: [
       {
         href: "https://mdst.club/",
-        img_path: "/mdst_logo.jpg",
+        type: "website",
       },
       {
-        href: "https://www.linkedin.com/school/michigan-data-science-team/mycompany/",
-        img_path: "/linkedin.png",
+        href: "https://www.linkedin.com/school/michigan-data-science-team/",
+        type: "linkedin",
       },
       {
-        href: "https://www.instagram.com/um-mdst/",
-        img_path: "/instagram.png",
+        href: "https://www.instagram.com/mdst_um/",
+        type: "instagram",
       },
     ],
   },
@@ -42,11 +43,11 @@ const teams: Team[] = [
     icons: [
       {
         href: "https://sph.umich.edu/biostat/statcom/",
-        img_path: "/statcom.png",
+        type: "website",
       },
       {
         href: "https://www.instagram.com/umichstats/?hl=en",
-        img_path: "/instagram.png",
+        type: "instagram",
       },
     ],
   },
@@ -58,23 +59,15 @@ const teams: Team[] = [
     icons: [
       {
         href: "https://maisi.club/",
-        img_path: "/maisi.png",
+        type: "website",
       },
       {
         href: "https://discord.com/invite/VWXBn2Yhxq",
-        img_path: "/discord.png",
+        type: "discord",
       },
     ],
   },
 ];
-
-function Icon({ icon }: { icon: Icon }) {
-  return (
-    <a href={icon.href}>
-      <Image src={icon.img_path} alt={icon.href} width={45} height={45} />
-    </a>
-  );
-}
 
 function TeamCard({ team }: { team: Team }) {
   return (
@@ -86,13 +79,15 @@ function TeamCard({ team }: { team: Team }) {
         width={0}
         height={0}
         sizes="100vw"
-        style={{ width: "100%", height: "auto" }} // optional
+        style={{ width: "100%", height: "auto" }}
       />
       <div className="lg:px-0 pl-3 lg:col-span-1 col-span-2">
         <h3 className="my-3 font-medium text-2xl">{team.name}</h3>
         <div className="flex flex-row justify-center gap-3 mb-3">
           {team.icons.map((icon, index) => (
-            <Icon key={index} icon={icon} />
+            <a key={index} href={icon.href}>
+              <Icon name={icon.type} />
+            </a>
           ))}
         </div>
         <p className="font-light">{team.description}</p>
