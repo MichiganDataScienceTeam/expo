@@ -18,7 +18,7 @@ const teams: Team[] = [
   {
     name: "Michigan Data Science Team",
     description:
-      "Michigan Data Science Team (MDST) is the largest data science club at the University of Michigan, dedicated to equipping U-M students with the skills needed for future data-driven careers.",
+      "Michigan Data Science Team (MDST) is the largest data science club at the University of Michigan, dedicated to equipping U-M students with the skills needed for data-driven careers.",
     logo_path: "/mdst.png",
     icons: [
       {
