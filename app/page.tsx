@@ -7,12 +7,17 @@ export default function Home() {
     <div className="p-7">
       <Navbar />
       <div className="flex flex-col items-center">
-        <h1 className="text-center font-medium text-6xl py-10 text-pretty">
+        <h1
+          id="home"
+          className="text-center font-medium text-6xl py-10 text-pretty"
+        >
           DATA SCIENCE NIGHT @ <span>U-M</span>
         </h1>
         <RSVP />
-        <div id="about" className="mt-8 text-center max-w-screen-md">
-          <h1 className="font-regular text-3xl">About Data Science Night</h1>
+        <div id="about" className="text-center my-28 max-w-screen-md">
+          <h1 className="font-regular text-5xl mb-6">
+            About Data Science Night
+          </h1>
           <p>
             The Michigan Institute for Data Science&apos;s first Data Science
             Night spotlights MDST, MAISI and STATCOM&apos;s collaborative
@@ -24,6 +29,11 @@ export default function Home() {
         </div>
       </div>
       <TeamPanel />
+      <footer>
+        <div className="text-center p-10 border-t-2">
+          <p>Data Science Night @ U-M</p>
+        </div>
+      </footer>
     </div>
   );
 }

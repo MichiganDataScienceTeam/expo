@@ -8,7 +8,7 @@ export default function RSVP() {
         <div className="grid grid-cols-2 gap-4">
           <Image
             // className="sm:block hidden"
-            src="/rsvp.jpg"
+            src="https://michigandatascienceteam.github.io/expo/rsvp.jpg"
             alt="RSVP"
             width={1200}
             height={1000}

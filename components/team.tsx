@@ -71,10 +71,10 @@ const teams: Team[] = [
 
 function TeamCard({ team }: { team: Team }) {
   return (
-    <div className="grid sm:grid-cols-3 grid-cols-2 lg:auto-rows-max lg:grid-cols-1 p-5 bg-gray-700 text-center gap-2">
+    <div className="grid sm:grid-cols-3 grid-cols-2 lg:auto-rows-max lg:grid-cols-1 p-5 bg-gray-700 text-center gap-2 mb-28">
       <Image
         className="lg:object-contain sm:block hidden"
-        src={team.logo_path}
+        src={`https://michigandatascienceteam.github.io/expo/${team.logo_path}`}
         alt={team.name}
         width={0}
         height={0}
@@ -98,8 +98,8 @@ function TeamCard({ team }: { team: Team }) {
 
 export default function TeamPanel() {
   return (
-    <div className="flex flex-col items-center mt-7 align-middle">
-      <h1 className="font-regular text-3xl">Who We Are</h1>
+    <div id="team" className="flex flex-col items-center mt-7 align-middle">
+      <h1 className="font-regular text-5xl">Who We Are</h1>
       <div className="grid lg:grid-cols-3 lg:grid-rows-1 grid-cols-1 grid-rows-3 gap-5 mt-4 lg:max-w-screen-lg max-w-screen-sm">
         {teams.map((team, index) => (
           <TeamCard key={index} team={team} />
