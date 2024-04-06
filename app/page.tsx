@@ -15,11 +15,12 @@ export default function Home() {
           DATA SCIENCE NIGHT @ <span>U-M</span>
         </h1>
         <RSVP />
-        <div id="about" className="text-center my-20 max-w-screen-md">
-          <h1 className="font-regular sm:text-5xl text-3xl mb-5">
-            About Data Science Night
-          </h1>
-          <p>
+        <div
+          id="about"
+          className="flex flex-col text-center items-center my-10 max-w-screen-md"
+        >
+          <h1 className="font-regular sm:text-5xl text-3xl mb-8">Event</h1>
+          <p className="mb-5">
             The Michigan Institute for Data Science&apos;s first Data Science
             Night spotlights MDST, MAISI and STATCOM&apos;s collaborative
             efforts, featuring projects from MDST and STATCOM, ranging from
@@ -27,11 +28,22 @@ export default function Home() {
             AI ethical simulation workshop by MAISI, underscoring the
             significance of ethics and responsible data use in data science.
           </p>
+          <p className="text-xl font-bold">
+            Join us on April 19th, 2024 at the Central Campus Classroom Building
+            from 4:30 PM to 8:30 PM.
+          </p>
+          <Image
+            className="my-10"
+            src="flyer.png"
+            alt="event flyer"
+            width={400}
+            height={900}
+          />
         </div>
       </div>
       <TeamPanel />
-      <footer className="border-t-2 px-5 flex flex-row justify-center align-middle pt-6">
-        <p className="md:text-2xl text-md pr-10 font-bold">DSN @ U-M</p>
+      <footer className="border-t-2 px-5 flex flex-row justify-center align-middle pt-6 mt-10">
+        <p className="md:text-xl text-md pr-10 font-bold">DSN @ U-M</p>
         <div className="w-48">
           <Image
             className="object-contain"

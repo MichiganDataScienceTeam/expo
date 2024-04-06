@@ -104,12 +104,9 @@ function TeamCard({ team }: { team: Team }) {
 
 export default function TeamPanel() {
   return (
-    <div
-      id="team"
-      className="flex flex-col items-center mt-7 align-middle mb-20"
-    >
-      <h1 className="font-regular sm:text-5xl text-3xl">About the Clubs</h1>
-      <div className="grid lg:grid-cols-3 lg:grid-rows-1 grid-cols-1 grid-rows-3 gap-5 mt-10 lg:max-w-screen-lg max-w-screen-sm">
+    <div id="team" className="flex flex-col items-center align-middle">
+      <h1 className="font-regular sm:text-5xl text-3xl mb-8">Clubs</h1>
+      <div className="grid lg:grid-cols-3 lg:grid-rows-1 grid-cols-1 grid-rows-3 gap-5 lg:max-w-screen-lg max-w-screen-sm">
         {teams.map((team, index) => (
           <TeamCard key={index} team={team} />
         ))}
