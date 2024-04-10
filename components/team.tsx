@@ -26,12 +26,12 @@ const teams: Team[] = [
         type: "website",
       },
       {
-        href: "https://www.linkedin.com/school/michigan-data-science-team/",
-        type: "linkedin",
-      },
-      {
         href: "https://www.instagram.com/mdst_um/",
         type: "instagram",
+      },
+      {
+        href: "https://www.linkedin.com/school/michigan-data-science-team/",
+        type: "linkedin",
       },
     ],
   },
@@ -68,6 +68,10 @@ const teams: Team[] = [
       {
         href: "https://discord.com/invite/VWXBn2Yhxq",
         type: "discord",
+      },
+      {
+        href: "https://www.instagram.com/maisi_um/",
+        type: "instagram",
       },
     ],
   },
